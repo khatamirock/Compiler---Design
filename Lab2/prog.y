@@ -12,12 +12,13 @@ prog: statements
       ;
 
 statements : statements statement 
-           | 
-           ;
+           | //    empty rule here!!!
+           ; // defines the end
+
  statement : if_statement
             | id_assign
             | while_statement
-            ;
+            ; //end
 
 while_statement: WHILE LP exp RP LB statements RB            
 if_statement: IF LP exp RP LB statements RB
